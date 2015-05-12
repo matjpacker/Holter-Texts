@@ -1,0 +1,4 @@
+An ambulatory Holter recording was started on <$Recording.StartTime$> with a duration of <$Recording.RecLength$> hours.
+The average heart rate was <$TArrData.MeanHRDay$> bpm during the day, <$TArrData.MeanHRNight$> bpm at night and <$TArrData.MeanHR$> bpm over the complete recording.
+The maximum heart rate was <$TArrData.MaxHR$> bpm at <$TArrData.MaxHRTime$>. The minimum heart rate was <$TArrData.MinHR$> bpm at <$TArrData.MinHRTime$>.
+The standard deviation over all normal beats was <$HRV-StdParams.SDNN$>.

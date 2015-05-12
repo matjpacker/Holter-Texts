@@ -1,0 +1,32 @@
+An ambulatory Holter recording was started on <$Recording.StartTime$> with a duration of <$Recording.RecLength$> hours.
+The average heart rate was <$TArrData.MeanHRDay$> bpm during the day, <$TArrData.MeanHRNight$> bpm at night and <$TArrData.MeanHR$> bpm over the complete recording.
+The maximum heart rate was <$TArrData.MaxHR$> bpm at <$TArrData.MaxHRTime$>. The minimum heart rate was <$TArrData.MinHR$> bpm at <$TArrData.MinHRTime$>.
+<if$<$HRV-StdParams.SDNN$>$if>The standard deviation over all normal beats was <$HRV-StdParams.SDNN$>.
+<endif>
+In total <$TArrData.BeatNum:255$> beats were found of which <$TArrData.BeatNum:3$> were classified as ventricular beats. 
+
+Ventricular activity:
+  VT(s): <$TArrData.NumVTachy$>
+  NSVTs: <$TArrData.NumNSVTachy$>
+  Idioventricular Rhythm(s): <$TArrData.NumIRhyth$>
+  Salvo(s): <$TArrData.NumSalvo$>
+  Couplet(s): <$TArrData.NumCouplet$>/<$TArrData.NumPCouplet$>
+  Bigeminy(s): <$TArrData.NumBigem$>
+  Trigeminy(s): <$TArrData.NumTrigem$>
+  VES(s): <$TArrData.NumVEct$>
+  Isolated V(s): <$TArrData.NumIsolVBeat$>
+
+<if$<$TArrData.NumVTachy$>$if>  The most severe VT with a duration of <$TArrData.SevVTduration$> and a heart rate of <$TArrData.SevVTHR$> was found at <$TArrData.SevVTtime$>.
+
+<endif>Supraventricular activity:
+  Pause(s): <$TArrData.NumPause$>
+  SVES(s): <$TArrData.NumSVEct$>
+  PSVT(s): <$TArrData.NumPSVT$>
+  Tachycardia(s): <$TArrData.NumTachy$>
+  Bradicardia(s): <$TArrData.NumBrady$>
+
+<if$<$TArrData.NumPause$>$if>  The longest pause was <$TArrData.PauseDuration$> at <$TArrData.Pausetime$>.
+
+<endif><if$<$TArrData.BeatNum:254$>$if>Pacemaker activity:
+  <$TArrData.BeatNum:254$> beats were paced beats.
+<endif>
